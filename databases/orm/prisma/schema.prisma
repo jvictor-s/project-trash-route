@@ -1,0 +1,21 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Funcao {
+  id    String   @id @default(auto()) @map("_id") @db.ObjectId
+  desde DateTime @db.Date
+  tipo  String
+}
+
+model Pessoa {
+  id    String @id @default(auto()) @map("_id") @db.ObjectId
+  email String
+  nome  String
+}
