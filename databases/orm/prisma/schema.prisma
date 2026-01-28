@@ -8,14 +8,9 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Funcao {
-  id    String   @id @default(auto()) @map("_id") @db.ObjectId
-  desde DateTime @db.Date
-  tipo  String
-}
-
-model Pessoa {
+model User {
   id    String @id @default(auto()) @map("_id") @db.ObjectId
   email String
-  nome  String
+  host  String
+  name  String
 }
