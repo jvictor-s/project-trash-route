@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trash Route</title>
+    <link rel="stylesheet" href="./css/home-page-style.css">
+    <link rel="stylesheet" href="./css/reset.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Trash Route</h1>
+    <button class="menu-btn" onclick="openMenu()">☰</button>
+  </header>
+
+  <!-- OVERLAY -->
+  <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+  <!-- MENU DIREITO MOBILE -->
+  <aside class="side-menu" id="sideMenu">
+    <button class="close-btn" onclick="closeMenu()">✕</button>
+    <h2>Menu</h2>
+
+    <div class="menu-item">Rotas de Coleta</div>
+    <div class="menu-item">Calendário</div>
+    <div class="menu-item">Tipos de Reciclagem</div>
+    <div class="menu-item">Sobre o Projeto</div>
+  </aside>
+
+  <main>
+    <div class="card">
+      <h2>Próxima Coleta</h2>
+      <p>Sua próxima coleta seletiva será na <strong>Quarta-feira</strong>.</p>
+    </div>
+
+    <div class="card">
+      <h2>Dica Sustentável</h2>
+      <p>Separe plástico, papel e vidro antes do dia da coleta.</p>
+    </div>
+
+    <div class="card full">
+      <h2>Mapa de Coleta</h2>
+      <div class="map">Mapa em breve...</div>
+    </div>
+  </main>
+
+<script src="./js/menuMobile.js"></script>
+
+</body>
+</html>
