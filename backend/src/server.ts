@@ -1,7 +1,6 @@
 import express from "express";
-import { router } from "./routes/createUser.ts";
+import { router } from "./routes/routesUser.ts";
 import dotenv from "dotenv";
-import { get } from "node:http";
 
 dotenv.config();
 
