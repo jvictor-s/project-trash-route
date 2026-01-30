@@ -1,11 +1,17 @@
 import express from "express";
-import {prisma} from "../../databases/orm/lib/prisma.ts"
+import { router } from "./routes/createUser.ts";
+import dotenv from "dotenv";
+import { get } from "node:http";
+
+dotenv.config();
 
 const app = express();
 
-app.get("/",async (req,res)=>{
-    const Users = await prisma.user.findMany(); 
-    res.status(200).json(Users);
-})
+app.use(express.json());
+app.use(router)
 
-app.listen(3000);
+// app.get("/",(req,res) =>{
+//     res.send("Servidor rodando!")
+// })
+
+app.listen(process.env.PORT);
